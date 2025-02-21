@@ -11,6 +11,8 @@ import uvicorn
 import logging
 import shutil
 import stat
+import subprocess
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -134,4 +136,5 @@ async def process_video(video: VideoURL):
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
+    subprocess.run(["ffmpeg", "-version"])
     uvicorn.run(app, host="0.0.0.0", port=8000)
