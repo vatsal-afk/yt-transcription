@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+cloudinary
+python-multipart
+yt-dlp
+openai-whisper
+ffmpeg-python
+python-dotenv
